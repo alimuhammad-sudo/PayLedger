@@ -10,6 +10,7 @@ from app.core.config import Settings, get_settings
 from app.core.db import make_engine, session_factory
 from app.core.errors import install_error_handler
 from app.employees.router import router as employees_router
+from app.payroll.router import router as payroll_router
 
 
 def create_app(
@@ -30,6 +31,7 @@ def create_app(
     app.include_router(auth_router)
     app.include_router(employees_router)
     app.include_router(analytics_router)
+    app.include_router(payroll_router)
 
     @app.get("/api/health", tags=["meta"])
     def health() -> dict[str, str]:
