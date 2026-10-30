@@ -1,0 +1,8 @@
+/* Mantine provides the base styles; only app-wide tweaks live here. */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
