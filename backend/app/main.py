@@ -8,6 +8,7 @@ from app.auth.router import router as auth_router
 from app.core.config import Settings, get_settings
 from app.core.db import make_engine, session_factory
 from app.core.errors import install_error_handler
+from app.employees.router import router as employees_router
 
 
 def create_app(
@@ -26,6 +27,7 @@ def create_app(
     app.state.clock = clock
     install_error_handler(app)
     app.include_router(auth_router)
+    app.include_router(employees_router)
 
     @app.get("/api/health", tags=["meta"])
     def health() -> dict[str, str]:
