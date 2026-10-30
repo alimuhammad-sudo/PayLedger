@@ -29,9 +29,11 @@ class Settings(BaseSettings):
         return url
 
     @model_validator(mode="after")
-    def _real_secret_in_prod(self) -> "Settings":
-        if self.env == "prod" and (self.secret_key == DEV_SECRET or len(self.secret_key) < 32):
-            raise ValueError("PAYROLL_SECRET_KEY must be set to 32+ characters in prod")
+    def _prod_safety(self) -> "Settings":
+        if self.env == "prod":
+            if self.secret_key == DEV_SECRET or len(self.secret_key) < 32:
+                raise ValueError("PAYROLL_SECRET_KEY must be set to 32+ characters in prod")
+            self.cookie_secure = True  # production is HTTPS only
         return self
 
 

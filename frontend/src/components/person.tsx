@@ -99,7 +99,8 @@ export function Person() {
                 data={oldestFirst.map((h) => ({ date: h.effective_on, Salary: h.new_salary_minor }))}
                 series={[{ name: "Salary", color: "teal.6" }]}
                 valueFormatter={(v) => money(v, p.currency)}
-                yAxisProps={{ width: 80, tickFormatter: (v: number) => compact(v, p.currency) }} />
+                yAxisProps={{ width: 80, domain: ["auto", "auto"],
+                  tickFormatter: (v: number) => compact(v, p.currency) }} />
             )}
             <Timeline active={0} bulletSize={14} lineWidth={2}>
               {p.history.map((h) => (
