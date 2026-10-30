@@ -1,5 +1,5 @@
 [project]
-name = "payroll-backend"
+name = "payledger-backend"
 version = "0.1.0"
 description = "Salary management API for ACME HR"
 requires-python = ">=3.11"

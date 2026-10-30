@@ -35,8 +35,8 @@ export function LoginForm() {
       <Paper withBorder shadow="sm" p="xl" w={380} component="form" onSubmit={submit}>
         <Stack>
           <div>
-            <Title order={2}>ACME Payroll</Title>
-            <Text c="dimmed" size="sm">Sign in to manage pay across ACME.</Text>
+            <Title order={2}>PayLedger</Title>
+            <Text c="dimmed" size="sm">Salary records and pay insight for ACME HR.</Text>
           </div>
           {error && <Alert color="red" role="alert">{error}</Alert>}
           <TextInput label="Email" type="email" autoComplete="username" required

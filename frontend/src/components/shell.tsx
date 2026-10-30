@@ -44,7 +44,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <AppShell.Header px="md">
         <Group h="100%" justify="space-between">
           <Text fw={700}>
-            ACME <Text span c="teal" inherit>Payroll</Text>
+            Pay<Text span c="teal" inherit>Ledger</Text>
           </Text>
           <Group gap="sm">
             <Text size="sm" visibleFrom="sm">{me.data.full_name}</Text>

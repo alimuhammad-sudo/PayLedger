@@ -22,7 +22,7 @@ def create_app(
     settings = settings or get_settings()
     engine = engine or make_engine(settings.database_url)
 
-    app = FastAPI(title="ACME Payroll API", version="0.1.0", docs_url="/api/docs",
+    app = FastAPI(title="PayLedger API", version="0.1.0", docs_url="/api/docs",
                   openapi_url="/api/openapi.json")  # fmt: skip
     app.state.settings = settings
     app.state.session_factory = session_factory(engine)

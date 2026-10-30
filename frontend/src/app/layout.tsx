@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
 
 export const metadata: Metadata = {
-  title: { default: "ACME Payroll", template: "%s | ACME Payroll" },
+  title: { default: "PayLedger", template: "%s | PayLedger" },
   description: "Salary records and pay insight for ACME HR",
 };
 

@@ -1,6 +1,6 @@
-# ACME Payroll
+# PayLedger
 
-Salary management for the HR Manager of ACME: 10,000 employees in nine countries, until now
+PayLedger is salary management for the HR Manager of ACME: 10,000 employees in nine countries, until now
 managed in spreadsheets. The app keeps every employee's pay with a full history of changes,
 shows how the company pays people in one currency, runs a monthly payroll record, and
 separates HR admins (who change things) from viewers (who only look).
